@@ -1,1 +1,1 @@
-# class-moba-game
+# League of Noobs
