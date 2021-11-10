@@ -4,7 +4,6 @@ from pygame.locals import K_ESCAPE, KEYDOWN, QUIT
 
 class Game:
     def __init__(self, view):
-
         pygame.init()
 
         self.WIDTH = 640
