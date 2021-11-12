@@ -6,8 +6,8 @@ class Game:
     def __init__(self, view):
         pygame.init()
 
-        self.WIDTH = 640
-        self.HEIGHT = 480
+        self.WIDTH = 1280
+        self.HEIGHT = 720
         self.SIZE = (self.WIDTH, self.HEIGHT)
 
         self.screen = pygame.display.set_mode(self.SIZE)
