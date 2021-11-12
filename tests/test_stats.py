@@ -39,18 +39,36 @@ def test_stats_addition_does_not_modify_existing():
     stats2 = Stats(1, 2, 3, 4, 5)
     result = stats1 + stats2
 
-    assert result.health == stats1.health
-    assert result.damage == stats1.damage
-    assert result.armor == stats1.armor
-    assert result.range == stats1.range
-    assert result.speed == stats1.speed
+    assert result.health != stats1.health
+    assert result.damage != stats1.damage
+    assert result.armor != stats1.armor
+    assert result.range != stats1.range
+    assert result.speed != stats1.speed
 
-    assert result.health == stats2.health
-    assert result.damage == stats2.damage
-    assert result.armor == stats2.armor
-    assert result.range == stats2.range
-    assert result.speed == stats2.speed
+    assert result.health != stats2.health
+    assert result.damage != stats2.damage
+    assert result.armor != stats2.armor
+    assert result.range != stats2.range
+    assert result.speed != stats2.speed
 
+
+def test_stats_optional_args():
+    s = Stats(health=5)
+
+    assert s.health == 5
+    assert s.damage == 0
+    assert s.armor == 0
+    assert s.range == 0
+    assert s.speed == 0
+
+
+    s = Stats(speed=10, range=6)
+
+    assert s.health == 0
+    assert s.damage == 0
+    assert s.armor == 0
+    assert s.range == 6
+    assert s.speed == 10
     
 
 

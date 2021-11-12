@@ -1,5 +1,4 @@
 class Stats:
-
     def __init__(self, 
                  health: int = 0, 
                  damage: int = 0, 
