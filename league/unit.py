@@ -4,12 +4,12 @@ from ability import Ability
 
 class Unit:
     def __init__(self, base_health: int, base_damage: int, base_armor: int, base_range: int, team: Team, enemy_team: Team) -> None:
-        self.base_health = base_health
-        self.base_damage = base_damage
-        self.base_armor = base_armor
-        self.base_range = base_range
-        self.team = team
-        self.enemy_team = enemy_team
+        self._base_health = base_health
+        self._base_damage = base_damage
+        self._base_armor = base_armor
+        self._base_range = base_range
+        self._team = team
+        self._enemy_team = enemy_team
 
     def apply_debuff(self, debuff: Ability):
         "Take an Ability object and stores the debuff"
@@ -24,13 +24,13 @@ class Unit:
         pass
 
     def get_damage(self) -> int:
-        self.base_damage
+        return self._base_damage
 
     def get_health(self) -> int:
-        self.base_health
+        return self._base_health
 
     def get_armor(self) -> int:
-        self.base_armor
+        return self._base_armor
 
     def get_range(self) -> int:
-        self.base_range
+        return self._base_range
