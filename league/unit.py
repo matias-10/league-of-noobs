@@ -1,13 +1,16 @@
 import pygame
+from typing import List
 from team import Team
 from ability import Ability
 
 class Unit:
-    def __init__(self, base_health: int, base_damage: int, base_armor: int, base_range: int, team: Team, enemy_team: Team) -> None:
+    def __init__(self, base_health: int, base_damage: int, base_armor: int, base_range: int, base_speed: int, level: int, abilities: List[Ability], team: Team, enemy_team: Team) -> None:
         self._base_health = base_health
         self._base_damage = base_damage
         self._base_armor = base_armor
         self._base_range = base_range
+        self._base_speed = base_speed
+        self._level = level
         self._team = team
         self._enemy_team = enemy_team
 
@@ -34,3 +37,9 @@ class Unit:
 
     def get_range(self) -> int:
         return self._base_range
+    
+    def get_speed(self) -> int:
+        return self._base_speed
+    
+    def get_level(self) -> int:
+        return self._level
