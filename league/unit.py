@@ -4,13 +4,13 @@ from team import Team
 from ability import Ability
 
 class Unit:
-    def __init__(self, base_health: int, base_damage: int, base_armor: int, base_range: int, base_speed: int, level: int, abilities: List[Ability], team: Team, enemy_team: Team) -> None:
+    def __init__(self, base_health: int, base_damage: int, base_armor: int, base_range: int, base_speed: int, abilities: List[Ability], team: Team, enemy_team: Team) -> None:
         self._base_health = base_health
         self._base_damage = base_damage
         self._base_armor = base_armor
         self._base_range = base_range
         self._base_speed = base_speed
-        self._level = level
+        self._level = 1
         self._team = team
         self._enemy_team = enemy_team
 
