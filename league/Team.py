@@ -1,7 +1,7 @@
 class Team:
-    def __init__(self, nexus, Minions: list[minion], towers: list[towers], heroes: list[hero]) -> None:
+    def __init__(self, nexus, minions: list[minion], towers: list[towers], heroes: list[hero]) -> None:
         self.nexus = nexus
-        self.Minions = Minions
+        self.minions = minions
         self.towers = towers
         self.heroes = heroes
     def spawn_minions():
