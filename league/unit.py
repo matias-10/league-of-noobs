@@ -1,7 +1,9 @@
 import pygame
-from team import Team
-from ability import Ability
-from stats import Stats
+
+
+from .team import Team
+from .ability import Ability
+from .stats import Stats
 
 
 class Unit:
