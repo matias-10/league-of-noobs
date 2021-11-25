@@ -4,7 +4,6 @@ import pytest
 
 s1 = Stats(0, 0, 0, 0, 0)
 s2 = Stats(10, 5, 2, 0, 2)
-s3 = Stats(0, 20, 20, -5, -5)
 
 def test_item_attributes():
     i1 = Item("hammer", 8, s1)
