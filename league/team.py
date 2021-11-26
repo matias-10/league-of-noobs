@@ -1,5 +1,4 @@
-class Team:
-   from typing import List, Tuple
+from typing import List, Tuple
 from unit import Hero, Tower, Nexus, Minion
 
 
@@ -18,7 +17,7 @@ class Team:
        return self.nexus
     
     def get_all(self): #Concatonate lists
-        all = [self._towers, self.heroes, self.nexus]
+        all = self._towers + self.heroes + self.nexus
         return all
     
     def _spawn_towers(tower_points :List[Tuple[int, int]]):
@@ -32,7 +31,7 @@ class Team:
         pass
     
     @staticmethod
-    def create_red_team( heroes: List[Hero]) -> "Team":
+    def create_red_team(heroes: List[Hero]) -> "Team":
         pass
 
 
